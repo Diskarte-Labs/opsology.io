@@ -84,7 +84,7 @@ export default function Home() {
               </a>
               <a
                 href={`mailto:${EMAIL}`}
-                className="inline-flex items-center justify-center rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
               >
                 Book a conversation
               </a>
@@ -130,13 +130,13 @@ export default function Home() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href={`mailto:${EMAIL}`}
-                  className="inline-flex items-center justify-center rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
                 >
                   Email {EMAIL}
                 </a>
                 <a
                   href="#assessment"
-                  className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 transition hover:bg-white/10"
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 transition hover:bg-white/10"
                 >
                   What you get
                 </a>
@@ -221,7 +221,7 @@ export default function Home() {
                 <div className="flex flex-col gap-3 pt-2 sm:flex-row">
                   <a
                     href={LINKEDIN_URL}
-                    className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 transition hover:bg-white/10"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 transition hover:bg-white/10"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -229,7 +229,7 @@ export default function Home() {
                   </a>
                   <a
                     href={`mailto:${EMAIL}`}
-                    className="inline-flex items-center justify-center rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
                   >
                     Email Opsology
                   </a>
@@ -256,7 +256,7 @@ export default function Home() {
                 <div className="lg:col-span-4">
                   <a
                     href={`mailto:${EMAIL}`}
-                    className="flex w-full items-center justify-center rounded-2xl bg-orange-500 px-6 py-4 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
+                    className="flex w-full items-center justify-center whitespace-nowrap rounded-2xl bg-orange-500 px-6 py-4 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
                   >
                     {EMAIL}
                   </a>
