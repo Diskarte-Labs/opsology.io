@@ -86,7 +86,7 @@ export default function Home() {
                 href={`mailto:${EMAIL}`}
                 className="inline-flex items-center justify-center rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
               >
-                Start a conversation
+                Book a conversation
               </a>
             </div>
           </div>
@@ -242,7 +242,7 @@ export default function Home() {
               <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
                 <div className="lg:col-span-8">
                   <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                    Start a conversation
+                    Book a conversation
                   </h2>
                   <p className="mt-3 text-sm leading-7 text-white/75">
                     If your platform is becoming too important to rely on
