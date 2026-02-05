@@ -8,6 +8,7 @@ function Container({ children }: { children: React.ReactNode }) {
 function Pill({ children }: { children: React.ReactNode }) {
   return (
     <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs tracking-wide text-white/80">
+      <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-orange-400" />
       {children}
     </span>
   );
@@ -43,13 +44,18 @@ function Card({
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#070A12] text-white">
+    <div className="min-h-screen bg-[var(--ops-bg)] text-white">
       {/* Background */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-indigo-500/20 blur-3xl" />
-        <div className="absolute -bottom-48 right-[-6rem] h-[520px] w-[520px] rounded-full bg-cyan-500/10 blur-3xl" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:48px_48px] opacity-[0.25]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#070A12]/20 to-[#070A12]" />
+        {/* Accent glows */}
+        <div className="absolute -top-56 left-1/2 h-[640px] w-[640px] -translate-x-1/2 rounded-full bg-orange-500/14 blur-3xl" />
+        <div className="absolute -bottom-56 right-[-8rem] h-[640px] w-[640px] rounded-full bg-sky-500/10 blur-3xl" />
+
+        {/* Subtle grid */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:56px_56px] opacity-[0.18]" />
+
+        {/* Vignette */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--ops-bg-2)]/0 via-[var(--ops-bg)]/40 to-[var(--ops-bg-2)]" />
       </div>
 
       {/* Header */}
@@ -57,8 +63,10 @@ export default function Home() {
         <Container>
           <div className="flex items-center justify-between py-8">
             <div className="flex items-center gap-3">
-              <div className="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-white/5">
-                <span className="text-sm font-semibold tracking-tight">O</span>
+              <div className="grid h-9 w-9 place-items-center rounded-xl border border-orange-400/30 bg-orange-500/10 shadow-sm shadow-orange-500/10">
+                <span className="text-sm font-semibold tracking-tight text-orange-200">
+                  O
+                </span>
               </div>
               <div className="leading-tight">
                 <div className="text-sm font-semibold tracking-tight">Opsology</div>
@@ -79,7 +87,7 @@ export default function Home() {
               </a>
               <a
                 href={`mailto:${EMAIL}`}
-                className="inline-flex items-center justify-center rounded-full bg-white px-4 py-2 text-sm font-medium text-[#070A12] shadow-sm transition hover:bg-white/90"
+                className="inline-flex items-center justify-center rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
               >
                 Start a conversation
               </a>
@@ -100,8 +108,8 @@ export default function Home() {
               </div>
 
               <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-                Operational confidence for platforms that can’t afford
-                instability.
+                Operational confidence for platforms that can’t afford{" "}
+                <span className="text-orange-300">instability</span>.
               </h1>
 
               <p className="mt-6 text-lg leading-8 text-white/75">
@@ -121,7 +129,7 @@ export default function Home() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href={`mailto:${EMAIL}`}
-                  className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#070A12] shadow-sm transition hover:bg-white/90"
+                  className="inline-flex items-center justify-center rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
                 >
                   Email {EMAIL}
                 </a>
@@ -221,7 +229,7 @@ export default function Home() {
                   </a>
                   <a
                     href={`mailto:${EMAIL}`}
-                    className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#070A12] shadow-sm transition hover:bg-white/90"
+                    className="inline-flex items-center justify-center rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
                   >
                     Email Opsology
                   </a>
@@ -248,7 +256,7 @@ export default function Home() {
                 <div className="lg:col-span-4">
                   <a
                     href={`mailto:${EMAIL}`}
-                    className="flex w-full items-center justify-center rounded-2xl bg-white px-6 py-4 text-sm font-semibold text-[#070A12] shadow-sm transition hover:bg-white/90"
+                    className="flex w-full items-center justify-center rounded-2xl bg-orange-500 px-6 py-4 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
                   >
                     {EMAIL}
                   </a>
