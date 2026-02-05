@@ -110,11 +110,10 @@ export default function Home() {
               </h1>
 
               <p className="mt-6 text-lg leading-8 text-white/75">
-                When technology becomes business-critical, operational
-                confidence matters. Opsology provides senior, independent
-                technical assurance to organisations whose platforms cannot
-                afford instability, scaling failure, or hidden architectural
-                risk.
+                When technology becomes business-critical, operational certainty
+                matters. Opsology provides senior, independent technical
+                assurance to organisations whose platforms cannot afford
+                instability, scaling failure, or hidden architectural risk.
               </p>
 
               <p className="mt-4 text-lg leading-8 text-white/75">
@@ -211,8 +210,8 @@ export default function Home() {
                   enterprise and high-growth environments.
                 </p>
                 <p>
-                  Known for calm judgement, rapid situational understanding,
-                  and commercially grounded technical insight.
+                  Known for calm judgement, rapid situational understanding, and
+                  commercially grounded technical insight.
                 </p>
                 <div className="flex flex-col gap-3 pt-2 sm:flex-row">
                   <a
