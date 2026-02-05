@@ -122,6 +122,11 @@ export default function Home() {
                 without internal bias.
               </p>
 
+              <p className="mt-6 text-sm leading-7 text-white/65">
+                Trusted across enterprise and high-growth environments including
+                global logistics and national-scale platforms.
+              </p>
+
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href={`mailto:${EMAIL}`}
