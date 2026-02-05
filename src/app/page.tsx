@@ -122,7 +122,7 @@ export default function Home() {
 
               <p className="mt-4 text-lg leading-8 text-white/75">
                 This is not staff augmentation or generic consulting. It is
-                experienced, systems-level judgement — applied quickly and
+                experienced, systems-level judgement. Applied quickly and
                 without internal bias.
               </p>
 
@@ -173,7 +173,7 @@ export default function Home() {
                   Identify structural risks before they impact revenue.
                 </Card>
                 <Card title="Business consequence, not just tech">
-                  A prioritised view of what matters — and what to do next.
+                  A prioritised view of what matters, and what to do next.
                 </Card>
               </div>
             </div>
