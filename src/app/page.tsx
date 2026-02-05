@@ -122,7 +122,7 @@ export default function Home() {
                 without internal bias.
               </p>
 
-              <p className="mt-6 text-sm leading-7 text-white/65">
+              <p className="mt-4 text-lg leading-8 text-white/75">
                 Trusted across enterprise and high-growth environments including
                 global logistics and national-scale platforms.
               </p>
