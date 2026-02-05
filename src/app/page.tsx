@@ -123,8 +123,7 @@ export default function Home() {
               </p>
 
               <p className="mt-4 text-lg leading-8 text-white/75">
-                Trusted across enterprise and high-growth environments including
-                global logistics and national-scale platforms.
+                Trusted across enterprise and high-growth environments operating business-critical platforms at scale.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
