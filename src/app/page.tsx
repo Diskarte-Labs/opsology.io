@@ -63,13 +63,10 @@ export default function Home() {
         <Container>
           <div className="flex items-center justify-between py-8">
             <div className="flex items-center gap-3">
-              <div className="grid h-9 w-9 place-items-center rounded-xl border border-orange-400/30 bg-orange-500/10 shadow-sm shadow-orange-500/10">
-                <span className="text-sm font-semibold tracking-tight text-orange-200">
-                  O
-                </span>
-              </div>
               <div className="leading-tight">
-                <div className="text-sm font-semibold tracking-tight">Opsology</div>
+                <div className="font-serif text-xl font-semibold tracking-[0.02em] text-white sm:text-2xl">
+                  Opsology
+                </div>
                 <div className="text-xs text-white/60">
                   Independent Infrastructure Assurance
                 </div>
