@@ -103,13 +103,13 @@ export default function Home() {
             <div className="max-w-3xl">
               <div className="flex flex-wrap gap-2">
                 <Pill>Senior, independent assurance</Pill>
-                <Pill>Fast, focused engagements</Pill>
+                <Pill>High-impact engagements</Pill>
                 <Pill>Commercially grounded judgement</Pill>
               </div>
 
               <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-                Operational confidence for platforms that can’t afford{" "}
-                <span className="text-orange-300">instability</span>.
+                Operational assurance for platforms that cannot afford{" "}
+                <span className="text-orange-300">failure</span>.
               </h1>
 
               <p className="mt-6 text-lg leading-8 text-white/75">
@@ -170,8 +170,7 @@ export default function Home() {
                   surface under scale.
                 </Card>
                 <Card title="Which risks are underestimated">
-                  The quiet risks that don’t show in dashboards until they hit
-                  the business.
+                  Identify structural risks before they impact revenue.
                 </Card>
                 <Card title="Business consequence, not just tech">
                   A prioritised view of what matters — and what to do next.
