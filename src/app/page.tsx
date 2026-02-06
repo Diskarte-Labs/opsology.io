@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { newsreader } from "./fonts";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/markkaye/";
 const EMAIL = "hello@opsology.io";
@@ -72,9 +73,9 @@ export default function Home() {
       {/* Header */}
       <header className="relative">
         <Container>
-          <div className="flex items-center justify-between py-8">
+            <div className="flex items-center justify-between py-8">
             <div className="leading-tight">
-              <div className="font-heading text-xl font-semibold tracking-tight text-white sm:text-2xl">
+              <div className={`${newsreader.className} text-2xl font-semibold tracking-tight text-white sm:text-3xl lg:text-4xl`}>
                 Opsology
               </div>
               <div className="mt-0.5 text-xs text-white/60">
@@ -296,7 +297,7 @@ export default function Home() {
       <footer className="relative border-t border-white/10 py-10">
         <Container>
           <div className="flex flex-col gap-2 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
-            <p>© {new Date().getFullYear()} Opsology</p>
+            <p>© {new Date().getFullYear()} <span className={`${newsreader.className} text-sm font-semibold text-white/80 sm:text-base`}>Opsology</span></p>
             <p>Independent Infrastructure Assurance</p>
           </div>
         </Container>

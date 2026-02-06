@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, DM_Sans } from "next/font/google";
+import { newsreader } from "./fonts";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -38,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${dmSans.variable} ${newsreader.variable}`}>
       <body className="antialiased font-sans">{children}</body>
     </html>
   );

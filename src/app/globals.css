@@ -3,6 +3,7 @@
 @theme {
   --font-family-heading: var(--font-heading), ui-serif, Georgia, serif;
   --font-family-body: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-family-logo: var(--font-logo), ui-serif, Georgia, serif;
 }
 
 :root {
