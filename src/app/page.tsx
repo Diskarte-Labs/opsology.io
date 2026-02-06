@@ -110,27 +110,36 @@ export default function Home() {
               </div>
 
               <h1 className="mt-6 font-heading text-4xl font-semibold leading-[1.2] tracking-tighter text-white sm:text-5xl">
-                Operational assurance for platforms that cannot afford{" "}
-                <span className="text-orange-300">failure</span>
+                Operational assurance for platforms that{" "}
+                <span className="text-orange-300">cannot afford failure</span>
                 <span className="text-white">.</span>
               </h1>
 
               <p className="mt-6 text-lg leading-8 text-white/75">
                 When technology becomes business-critical, operational certainty
-                matters. Opsology provides senior, independent technical
-                assurance to organisations whose platforms cannot afford
-                instability, scaling failure, or hidden architectural risk.
+                matters. Opsology provides senior,{" "}
+                <span className="text-orange-300">
+                  independent technical assurance
+                </span>{" "}
+                to organisations whose platforms cannot afford instability,
+                scaling failure, or hidden architectural risk.
               </p>
 
               <p className="mt-4 text-lg leading-8 text-white/75">
-                This is not staff augmentation or generic consulting. It is
-                experienced, systems-level judgement. Applied quickly and
-                without internal bias.
+                This is not staff augmentation or generic consulting. It is{" "}
+                <span className="text-orange-300">
+                  systems-level judgement grounded in experience
+                </span>
+                {", "}
+                brought to bear rapidly and without internal bias.
               </p>
 
               <p className="mt-4 text-lg leading-8 text-white/75">
-                Trusted across enterprise and high-growth environments operating
-                business-critical platforms at scale.
+                Trusted across enterprise and high-growth environments operating{" "}
+                <span className="text-orange-300">
+                  business-critical platforms
+                </span>{" "}
+                at scale.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
