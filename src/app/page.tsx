@@ -70,7 +70,7 @@ export default function Home() {
               <div
                 className={`${newsreader.className} text-2xl font-semibold tracking-tight text-white sm:text-3xl lg:text-4xl`}
               >
-                Opsology
+                Opsology<span className="text-orange-500">.</span>
               </div>
               <div className="mt-0.5 text-xs text-white/60">
                 Independent Infrastructure Assurance
@@ -160,7 +160,7 @@ export default function Home() {
               <div className="lg:col-span-5">
                 <SectionTitle
                   eyebrow="Engagement"
-                  title="Infrastructure Risk & Scale Assessment"
+                  title="Infrastructure Risk & Scale Assessment."
                 />
                 <p className="mt-4 text-sm leading-6 text-white/75">
                   A focused engagement designed to give leadership clear
@@ -194,7 +194,7 @@ export default function Home() {
           <Container>
             <div className="grid gap-10 lg:grid-cols-12">
               <div className="lg:col-span-5">
-                <SectionTitle eyebrow="Fit" title="Who engages Opsology" />
+                <SectionTitle eyebrow="Fit" title="Who engages Opsology?" />
               </div>
               <div className="lg:col-span-7">
                 <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
@@ -258,48 +258,48 @@ export default function Home() {
               <div className="lg:col-span-5">
                 <SectionTitle
                   eyebrow="Experience"
-                  title="Experience spanning global organisations."
+                  title="Trusted in complex enterprise environments."
                 />
               </div>
               <div className="lg:col-span-7">
                 <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-8">
                   <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
-                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-110 sm:h-14 sm:w-28">
+                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-125 sm:h-14 sm:w-28">
                       <img
                         src="/clients/apple-logo.png"
                         alt=""
                         className="h-5 w-auto max-w-[72px] object-contain sm:h-6"
                       />
                     </div>
-                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-110 sm:h-14 sm:w-28">
+                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-125 sm:h-14 sm:w-28">
                       <img
                         src="/clients/ikea-logo.png"
                         alt=""
                         className="h-5 w-auto max-w-[72px] object-contain sm:h-6"
                       />
                     </div>
-                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-110 sm:h-14 sm:w-28">
+                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-125 sm:h-14 sm:w-28">
                       <img
                         src="/clients/dhl-logo.png"
                         alt=""
                         className="h-5 w-auto max-w-[72px] object-contain sm:h-6"
                       />
                     </div>
-                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-110 sm:h-14 sm:w-28">
+                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-125 sm:h-14 sm:w-28">
                       <img
                         src="/clients/astrazeneca-logo.png"
                         alt=""
                         className="h-5 w-auto max-w-[72px] object-contain sm:h-6"
                       />
                     </div>
-                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-110 sm:h-14 sm:w-28">
+                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-125 sm:h-14 sm:w-28">
                       <img
                         src="/clients/bhp-logo.png"
                         alt=""
                         className="h-5 w-auto max-w-[72px] object-contain sm:h-6"
                       />
                     </div>
-                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-110 sm:h-14 sm:w-28">
+                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-125 sm:h-14 sm:w-28">
                       <img
                         src="/clients/lockheed_martin-logo.png"
                         alt=""
@@ -318,7 +318,7 @@ export default function Home() {
           <Container>
             <div className="grid gap-10 lg:grid-cols-12">
               <div className="lg:col-span-5">
-                <SectionTitle eyebrow="About" title="Independent by design" />
+                <SectionTitle eyebrow="About" title="Independent by design." />
               </div>
               <div className="lg:col-span-7 space-y-4 text-sm leading-7 text-white/80">
                 <p>
@@ -358,7 +358,7 @@ export default function Home() {
               <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
                 <div className="lg:col-span-8">
                   <h2 className="font-heading text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-                    Book a consultation
+                    Book a consultation.
                   </h2>
                   <p className="mt-3 text-sm leading-7 text-white/75">
                     If your platform is becoming too important to rely on
@@ -403,6 +403,7 @@ export default function Home() {
               >
                 Opsology
               </span>
+              <span className="text-orange-500">.</span>
             </p>
             <p>Independent Infrastructure Assurance</p>
           </div>
