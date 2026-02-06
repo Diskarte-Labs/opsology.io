@@ -6,9 +6,7 @@ const EMAIL = "hello@opsology.io";
 
 function Container({ children }: { children: ReactNode }) {
   return (
-    <div className="mx-auto w-full max-w-5xl px-6 sm:px-8">
-      {children}
-    </div>
+    <div className="mx-auto w-full max-w-5xl px-6 sm:px-8">{children}</div>
   );
 }
 
@@ -34,13 +32,7 @@ function SectionTitle({ eyebrow, title }: { eyebrow: string; title: string }) {
   );
 }
 
-function Card({
-  title,
-  children,
-}: {
-  title: string;
-  children: ReactNode;
-}) {
+function Card({ title, children }: { title: string; children: ReactNode }) {
   return (
     <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition-colors hover:border-white/15 hover:bg-white/[0.06]">
       <h3 className="font-heading text-base font-semibold text-white">
@@ -73,9 +65,11 @@ export default function Home() {
       {/* Header */}
       <header className="relative">
         <Container>
-            <div className="flex items-center justify-between py-8">
+          <div className="flex items-center justify-between py-8">
             <div className="leading-tight">
-              <div className={`${newsreader.className} text-2xl font-semibold tracking-tight text-white sm:text-3xl lg:text-4xl`}>
+              <div
+                className={`${newsreader.className} text-2xl font-semibold tracking-tight text-white sm:text-3xl lg:text-4xl`}
+              >
                 Opsology
               </div>
               <div className="mt-0.5 text-xs text-white/60">
@@ -135,7 +129,8 @@ export default function Home() {
               </p>
 
               <p className="mt-4 text-lg leading-8 text-white/75">
-                Trusted across enterprise and high-growth environments operating business-critical platforms at scale.
+                Trusted across enterprise and high-growth environments operating
+                business-critical platforms at scale.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -208,6 +203,110 @@ export default function Home() {
                     technology is now mission-critical and uncertainty is no
                     longer acceptable.
                   </p>
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* Trust */}
+        <section className="py-16 sm:py-20">
+          <Container>
+            <div className="grid gap-10 lg:grid-cols-12">
+              <div className="lg:col-span-5">
+                <SectionTitle
+                  eyebrow="Trust"
+                  title="Pivotal to success of €1 million programme."
+                />
+              </div>
+              <div className="lg:col-span-7">
+                <blockquote className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 sm:p-8">
+                  <div className="mb-2 text-orange-300" aria-hidden>
+                    <svg
+                      className="h-6 w-6 sm:h-7 sm:w-7"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.984zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                    </svg>
+                  </div>
+                  <p className="text-sm leading-[1.75] italic text-white/90">
+                    Mark&apos;s architectural vision and technical depth were
+                    pivotal to the success of a €1 million information
+                    management programme. He brings rare clarity,
+                    professionalism, and leadership that inspire confidence at
+                    every level.&quot;
+                  </p>
+                  <footer className="mt-6 flex flex-col gap-0.5 border-t border-orange-300/25 pt-6">
+                    <cite className="not-italic text-sm font-semibold text-white/90">
+                      Alan Bainbridge
+                    </cite>
+                    <span className="text-sm text-orange-300">
+                      Programme Manager, BHP
+                    </span>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* Experience */}
+        <section className="py-16 sm:py-20">
+          <Container>
+            <div className="grid gap-10 lg:grid-cols-12">
+              <div className="lg:col-span-5">
+                <SectionTitle
+                  eyebrow="Experience"
+                  title="Experience spanning global organisations."
+                />
+              </div>
+              <div className="lg:col-span-7">
+                <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-8">
+                  <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
+                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-110 sm:h-14 sm:w-28">
+                      <img
+                        src="/clients/apple-logo.png"
+                        alt=""
+                        className="h-5 w-auto max-w-[72px] object-contain sm:h-6"
+                      />
+                    </div>
+                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-110 sm:h-14 sm:w-28">
+                      <img
+                        src="/clients/ikea-logo.png"
+                        alt=""
+                        className="h-5 w-auto max-w-[72px] object-contain sm:h-6"
+                      />
+                    </div>
+                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-110 sm:h-14 sm:w-28">
+                      <img
+                        src="/clients/dhl-logo.png"
+                        alt=""
+                        className="h-5 w-auto max-w-[72px] object-contain sm:h-6"
+                      />
+                    </div>
+                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-110 sm:h-14 sm:w-28">
+                      <img
+                        src="/clients/astrazeneca-logo.png"
+                        alt=""
+                        className="h-5 w-auto max-w-[72px] object-contain sm:h-6"
+                      />
+                    </div>
+                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-110 sm:h-14 sm:w-28">
+                      <img
+                        src="/clients/bhp-logo.png"
+                        alt=""
+                        className="h-5 w-auto max-w-[72px] object-contain sm:h-6"
+                      />
+                    </div>
+                    <div className="flex h-12 w-24 items-center justify-center rounded-lg bg-white px-3 transition-transform duration-200 hover:scale-110 sm:h-14 sm:w-28">
+                      <img
+                        src="/clients/lockheed_martin-logo.png"
+                        alt=""
+                        className="h-5 w-auto max-w-[72px] object-contain sm:h-6"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -297,7 +396,14 @@ export default function Home() {
       <footer className="relative border-t border-white/10 py-10">
         <Container>
           <div className="flex flex-col gap-2 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
-            <p>© {new Date().getFullYear()} <span className={`${newsreader.className} text-sm font-semibold text-white/80 sm:text-base`}>Opsology</span></p>
+            <p>
+              © {new Date().getFullYear()}{" "}
+              <span
+                className={`${newsreader.className} text-sm font-semibold text-white/80 sm:text-base`}
+              >
+                Opsology
+              </span>
+            </p>
             <p>Independent Infrastructure Assurance</p>
           </div>
         </Container>
