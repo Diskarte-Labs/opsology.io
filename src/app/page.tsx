@@ -88,7 +88,7 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Book a consultation
+                Check availability
               </a>
             </div>
           </div>
@@ -135,7 +135,7 @@ export default function Home() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Book a consultation
+                  Check availability
                 </a>
                 <a
                   href="#assessment"
@@ -263,7 +263,7 @@ export default function Home() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Book a consultation
+                    Check availability
                   </a>
                   <p className="mt-3 text-center text-xs text-white/60">
                     Or connect on{" "}
