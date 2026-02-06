@@ -1,8 +1,25 @@
+"use client";
+
 import type { ReactNode } from "react";
 import { newsreader } from "./fonts";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/markkaye/";
 const EMAIL = "hello@opsology.io";
+
+function handleScheduleMeeting() {
+  const bookingUrl =
+    process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_BOOKING_URL ||
+    "https://calendar.app.google/BDMFRZxZFPkWD8BJ6";
+  const width = 800;
+  const height = 825;
+  const left = (window.screen.width - width) / 2;
+  const top = (window.screen.height - height) / 2;
+  window.open(
+    bookingUrl,
+    "ScheduleMeeting",
+    `width=${width},height=${height},left=${left},top=${top},resizable=yes,scrollbars=yes`
+  );
+}
 
 function Container({ children }: { children: ReactNode }) {
   return (
@@ -85,14 +102,13 @@ export default function Home() {
               >
                 LinkedIn
               </a>
-              <a
-                href="https://calendar.app.google/BDMFRZxZFPkWD8BJ6"
+              <button
+                type="button"
+                onClick={handleScheduleMeeting}
                 className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-orange-500 px-4 py-2.5 text-sm font-semibold text-[#071022] transition hover:bg-orange-400"
-                target="_blank"
-                rel="noreferrer"
               >
                 Check availability
-              </a>
+              </button>
             </div>
           </div>
         </Container>
@@ -143,14 +159,13 @@ export default function Home() {
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="https://calendar.app.google/BDMFRZxZFPkWD8BJ6"
+                <button
+                  type="button"
+                  onClick={handleScheduleMeeting}
                   className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-[#071022] transition hover:bg-orange-400"
-                  target="_blank"
-                  rel="noreferrer"
                 >
                   Check availability
-                </a>
+                </button>
                 <a
                   href="#assessment"
                   className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 transition hover:bg-white/10"
@@ -375,14 +390,13 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="lg:col-span-4">
-                  <a
-                    href="https://calendar.app.google/BDMFRZxZFPkWD8BJ6"
+                  <button
+                    type="button"
+                    onClick={handleScheduleMeeting}
                     className="flex w-full items-center justify-center whitespace-nowrap rounded-2xl bg-orange-500 px-6 py-4 text-sm font-semibold text-[#071022] transition hover:bg-orange-400"
-                    target="_blank"
-                    rel="noreferrer"
                   >
                     Check availability
-                  </a>
+                  </button>
                   <p className="mt-3 text-center text-xs text-white/60">
                     Or connect on{" "}
                     <a
