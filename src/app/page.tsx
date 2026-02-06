@@ -83,10 +83,12 @@ export default function Home() {
                 LinkedIn
               </a>
               <a
-                href={`mailto:${EMAIL}`}
+                href="https://calendar.app.google/BDMFRZxZFPkWD8BJ6"
                 className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
+                target="_blank"
+                rel="noreferrer"
               >
-                Book a conversation
+                Book a consultation
               </a>
             </div>
           </div>
@@ -128,10 +130,12 @@ export default function Home() {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href={`mailto:${EMAIL}`}
+                  href="https://calendar.app.google/BDMFRZxZFPkWD8BJ6"
                   className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  Email {EMAIL}
+                  Book a consultation
                 </a>
                 <a
                   href="#assessment"
@@ -245,7 +249,7 @@ export default function Home() {
               <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
                 <div className="lg:col-span-8">
                   <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                    Book a conversation
+                    Book a consultation
                   </h2>
                   <p className="mt-3 text-sm leading-7 text-white/75">
                     If your platform is becoming too important to rely on
@@ -254,10 +258,12 @@ export default function Home() {
                 </div>
                 <div className="lg:col-span-4">
                   <a
-                    href={`mailto:${EMAIL}`}
+                    href="https://calendar.app.google/BDMFRZxZFPkWD8BJ6"
                     className="flex w-full items-center justify-center whitespace-nowrap rounded-2xl bg-orange-500 px-6 py-4 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    {EMAIL}
+                    Book a consultation
                   </a>
                   <p className="mt-3 text-center text-xs text-white/60">
                     Or connect on{" "}
