@@ -1,8 +1,92 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+
 const LINKEDIN_URL = "https://www.linkedin.com/in/markkaye/";
 const EMAIL = "hello@opsology.io";
+const BOOKING_URL = "https://calendar.app.google/BDMFRZxZFPkWD8BJ6";
 
 function Container({ children }: { children: React.ReactNode }) {
   return <div className="mx-auto w-full max-w-5xl px-6">{children}</div>;
+}
+
+function BookingModal({
+  open,
+  onClose,
+}: {
+  open: boolean;
+  onClose: () => void;
+}) {
+  // lock scroll when open
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [open]);
+
+  const iframeSrc = useMemo(() => {
+    // Some Google booking links don't allow iframing; we still try.
+    return BOOKING_URL;
+  }, []);
+
+  if (!open) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Book a consultation"
+    >
+      <button
+        className="absolute inset-0 bg-black/70"
+        onClick={onClose}
+        aria-label="Close"
+      />
+
+      <div className="relative w-full max-w-3xl overflow-hidden rounded-3xl border border-white/10 bg-[var(--ops-bg)] shadow-2xl">
+        <div className="flex items-center justify-between gap-4 border-b border-white/10 px-5 py-4">
+          <div className="min-w-0">
+            <div className="text-sm font-semibold text-white">
+              Book a consultation
+            </div>
+            <div className="text-xs text-white/60">
+              If the scheduler doesn’t load here, use the button to open it in a
+              new tab.
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-orange-500 px-3 py-2 text-xs font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
+            >
+              Open in new tab
+            </a>
+            <button
+              onClick={onClose}
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-3 py-2 text-xs font-semibold text-white/90 transition hover:bg-white/10"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+
+        <div className="aspect-[16/11] w-full bg-black/20">
+          <iframe
+            title="Opsology booking"
+            src={iframeSrc}
+            className="h-full w-full"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 function Pill({ children }: { children: React.ReactNode }) {
@@ -43,6 +127,8 @@ function Card({
 }
 
 export default function Home() {
+  const [bookingOpen, setBookingOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-[var(--ops-bg)] text-white">
       {/* Background */}
@@ -57,6 +143,8 @@ export default function Home() {
         {/* Vignette */}
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--ops-bg-2)]/0 via-[var(--ops-bg)]/40 to-[var(--ops-bg-2)]" />
       </div>
+
+      <BookingModal open={bookingOpen} onClose={() => setBookingOpen(false)} />
 
       {/* Header */}
       <header className="relative">
@@ -82,14 +170,12 @@ export default function Home() {
               >
                 LinkedIn
               </a>
-              <a
-                href="https://calendar.app.google/BDMFRZxZFPkWD8BJ6"
+              <button
+                onClick={() => setBookingOpen(true)}
                 className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
-                target="_blank"
-                rel="noreferrer"
               >
                 Book a consultation
-              </a>
+              </button>
             </div>
           </div>
         </Container>
@@ -129,14 +215,12 @@ export default function Home() {
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="https://calendar.app.google/BDMFRZxZFPkWD8BJ6"
+                <button
+                  onClick={() => setBookingOpen(true)}
                   className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
-                  target="_blank"
-                  rel="noreferrer"
                 >
                   Book a consultation
-                </a>
+                </button>
                 <a
                   href="#assessment"
                   className="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 transition hover:bg-white/10"
@@ -257,14 +341,12 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="lg:col-span-4">
-                  <a
-                    href="https://calendar.app.google/BDMFRZxZFPkWD8BJ6"
+                  <button
+                    onClick={() => setBookingOpen(true)}
                     className="flex w-full items-center justify-center whitespace-nowrap rounded-2xl bg-orange-500 px-6 py-4 text-sm font-semibold text-[#071022] shadow-sm shadow-orange-500/20 transition hover:bg-orange-400"
-                    target="_blank"
-                    rel="noreferrer"
                   >
                     Book a consultation
-                  </a>
+                  </button>
                   <p className="mt-3 text-center text-xs text-white/60">
                     Or connect on{" "}
                     <a
