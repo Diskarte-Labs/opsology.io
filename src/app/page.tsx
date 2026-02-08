@@ -1,17 +1,17 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { newsreader } from "./fonts";
+import Image from "next/image";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/markkaye/";
 const EMAIL = "hello@opsology.io";
 
 function handleScheduleMeeting() {
   const bookingUrl =
-    process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_BOOKING_URL ||
-    "https://calendar.app.google/BDMFRZxZFPkWD8BJ6";
+    process.env.NEXT_PUBLIC_BOOKING_URL ||
+    "https://fantastical.app/mark-opsology/initial-consultation";
   const width = 800;
-  const height = 825;
+  const height = 1075;
   const left = (window.screen.width - width) / 2;
   const top = (window.screen.height - height) / 2;
   window.open(
@@ -84,11 +84,14 @@ export default function Home() {
         <Container>
           <div className="flex items-center justify-between py-8">
             <div className="leading-tight">
-              <div
-                className={`${newsreader.className} text-2xl font-semibold tracking-tight text-white sm:text-3xl lg:text-4xl`}
-              >
-                Opsology<span className="text-orange-500">.</span>
-              </div>
+              <Image
+                src="/opsology-logo.png"
+                alt="Opsology"
+                width={1150}
+                height={280}
+                className="h-7 w-auto sm:h-8 lg:h-9"
+                priority
+              />
               <div className="mt-0.5 text-xs text-white/60">
                 Independent Infrastructure Assurance
               </div>
@@ -419,14 +422,15 @@ export default function Home() {
       <footer className="relative border-t border-white/10 py-10">
         <Container>
           <div className="flex flex-col gap-2 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
-            <p>
+            <p className="flex items-center gap-1">
               © {new Date().getFullYear()}{" "}
-              <span
-                className={`${newsreader.className} text-sm font-semibold text-white/80 sm:text-base`}
-              >
-                Opsology
-              </span>
-              <span className="text-orange-500">.</span>
+              <Image
+                src="/opsology-logo.png"
+                alt="Opsology"
+                width={1150}
+                height={280}
+                className="h-4 w-auto sm:h-5"
+              />
             </p>
             <p>Independent Infrastructure Assurance</p>
           </div>
