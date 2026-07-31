@@ -9,9 +9,9 @@ const EMAIL = "hello@opsology.io";
 function handleScheduleMeeting() {
   const bookingUrl =
     process.env.NEXT_PUBLIC_BOOKING_URL ||
-    "https://fantastical.app/mark-opsology/initial-consultation";
-  const width = 800;
-  const height = 1075;
+    "https://outlook.office.com/book/InitialConsultation@diskarte-group.com/?ismsaljsauthenabled";
+  const width = 1025;
+  const height = 1205;
   const left = (window.screen.width - width) / 2;
   const top = (window.screen.height - height) / 2;
   window.open(
