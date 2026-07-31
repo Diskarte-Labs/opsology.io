@@ -2,9 +2,9 @@
 
 import type { ReactNode } from "react";
 import Image from "next/image";
+import Contact from "@/components/Contact";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/markkaye/";
-const EMAIL = "hello@opsology.io";
 
 function handleScheduleMeeting() {
   const bookingUrl =
@@ -110,7 +110,7 @@ export default function Home() {
                 onClick={handleScheduleMeeting}
                 className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-orange-500 px-4 py-2.5 text-sm font-semibold text-[#071022] transition hover:bg-orange-400"
               >
-                Check availability
+                Book a consult
               </button>
             </div>
           </div>
@@ -167,7 +167,7 @@ export default function Home() {
                   onClick={handleScheduleMeeting}
                   className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-[#071022] transition hover:bg-orange-400"
                 >
-                  Check availability
+                  Book a consult
                 </button>
                 <a
                   href="#assessment"
@@ -367,10 +367,10 @@ export default function Home() {
                     View LinkedIn
                   </a>
                   <a
-                    href={`mailto:${EMAIL}`}
+                    href="#contact"
                     className="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-orange-500 px-6 py-3 text-sm font-semibold text-[#071022] transition hover:bg-orange-400"
                   >
-                    Email Opsology
+                    Send a message
                   </a>
                 </div>
               </div>
@@ -398,7 +398,7 @@ export default function Home() {
                     onClick={handleScheduleMeeting}
                     className="flex w-full items-center justify-center whitespace-nowrap rounded-2xl bg-orange-500 px-6 py-4 text-sm font-semibold text-[#071022] transition hover:bg-orange-400"
                   >
-                    Check availability
+                    Book a consult
                   </button>
                   <p className="mt-3 text-center text-xs text-white/60">
                     Or connect on{" "}
@@ -417,6 +417,8 @@ export default function Home() {
             </div>
           </Container>
         </section>
+
+        <Contact />
       </main>
 
       <footer className="relative border-t border-white/10 py-10">
