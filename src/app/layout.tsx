@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, DM_Sans } from "next/font/google";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { newsreader } from "./fonts";
 import "./globals.css";
@@ -83,6 +84,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
         {children}
+        <Script
+          src="https://umami.hl.mkaye.net/script.js"
+          data-website-id="dd7c5183-fc2b-446c-bba5-373279758143"
+          data-domains="opsology.io"
+          strategy="afterInteractive"
+        />
         <Analytics />
       </body>
     </html>
