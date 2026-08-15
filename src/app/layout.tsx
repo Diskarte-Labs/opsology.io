@@ -77,6 +77,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${fraunces.variable} ${dmSans.variable} ${newsreader.variable}`}>
+      <head>
+        <script
+          defer
+          src="https://umami.hl.mkaye.net/script.js"
+          data-website-id="dd7c5183-fc2b-446c-bba5-373279758143"
+        />
+      </head>
       <body className="antialiased font-sans">
         <script
           type="application/ld+json"
