@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, DM_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { newsreader } from "./fonts";
+import { UMAMI_COLLECT_HOST, UMAMI_SCRIPT_URL, UMAMI_WEBSITE_ID } from "@/lib/umami";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -80,8 +81,9 @@ export default function RootLayout({
       <head>
         <script
           defer
-          src="https://umami.hl.mkaye.net/script.js"
-          data-website-id="dd7c5183-fc2b-446c-bba5-373279758143"
+          src={UMAMI_SCRIPT_URL}
+          data-website-id={UMAMI_WEBSITE_ID}
+          data-host-url={UMAMI_COLLECT_HOST}
         />
       </head>
       <body className="antialiased font-sans">
