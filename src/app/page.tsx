@@ -6,6 +6,8 @@ import Contact from "@/components/Contact";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/markkaye/";
 const DISKARTE_GROUP_URL = "https://www.diskarte-group.com";
+const COMPANIES_HOUSE_URL =
+  "https://find-and-update.company-information.service.gov.uk/company/16328175";
 
 function handleScheduleMeeting() {
   const bookingUrl =
@@ -424,7 +426,7 @@ export default function Home() {
 
       <footer className="relative border-t border-white/10 py-10">
         <Container>
-          <div className="flex flex-col gap-2 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-2 text-xs text-white/60 sm:flex-row sm:items-start sm:justify-between">
             <div className="flex flex-col gap-1">
               <p className="flex items-center gap-1">
                 © {new Date().getFullYear()}{" "}
@@ -447,6 +449,19 @@ export default function Home() {
                   Diskarte Group
                 </a>{" "}
                 brand
+              </p>
+              <p className="max-w-md">
+                Opsology is a trading name of VPTK Services Ltd. Registered in
+                England and Wales. Company no.{" "}
+                <a
+                  href={COMPANIES_HOUSE_URL}
+                  className="underline decoration-white/20 underline-offset-4 hover:decoration-white/60"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  16328175
+                </a>
+                .
               </p>
             </div>
             <p>Independent Infrastructure Assurance</p>
