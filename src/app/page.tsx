@@ -5,6 +5,7 @@ import Image from "next/image";
 import Contact from "@/components/Contact";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/markkaye/";
+const DISKARTE_GROUP_URL = "https://www.diskarte-group.com";
 
 function handleScheduleMeeting() {
   const bookingUrl =
@@ -424,16 +425,30 @@ export default function Home() {
       <footer className="relative border-t border-white/10 py-10">
         <Container>
           <div className="flex flex-col gap-2 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
-            <p className="flex items-center gap-1">
-              © {new Date().getFullYear()}{" "}
-              <Image
-                src="/opsology-logo.png"
-                alt="Opsology"
-                width={1150}
-                height={280}
-                className="h-4 w-auto sm:h-5"
-              />
-            </p>
+            <div className="flex flex-col gap-1">
+              <p className="flex items-center gap-1">
+                © {new Date().getFullYear()}{" "}
+                <Image
+                  src="/opsology-logo.png"
+                  alt="Opsology"
+                  width={1150}
+                  height={280}
+                  className="h-4 w-auto sm:h-5"
+                />
+              </p>
+              <p>
+                Opsology is a{" "}
+                <a
+                  href={DISKARTE_GROUP_URL}
+                  className="underline decoration-white/20 underline-offset-4 hover:decoration-white/60"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Diskarte Group
+                </a>{" "}
+                brand
+              </p>
+            </div>
             <p>Independent Infrastructure Assurance</p>
           </div>
         </Container>
